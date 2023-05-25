@@ -21,8 +21,6 @@ def main():
     from score import Score
     score = Score()
     events = load_from_file()
-    for event in events:
-        print(event.key_word)
     ask_all_question(events, score)
     ask_all_chronological_question(events, number_of_event=2, score = score)
 

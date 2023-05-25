@@ -22,6 +22,8 @@ class Score:
         print("Good answer")
         self += 1
 
-    def on_wrong_answer(self) -> None:
+    def on_wrong_answer(self, correct_answer:str = None) -> None:
         print("Wrong answer")
+        if correct_answer is not None:
+            print(f"The correct answer was: {correct_answer}")
         self += 0

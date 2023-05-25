@@ -25,7 +25,8 @@ def correct_answer(events: [Event], user_answer: list[int], score:Score) -> None
     if is_good_answer(user_answer, good_answer):
         score.on_good_answer()
     else:
-        score.on_wrong_answer()
+        score.on_wrong_answer(f"The correct order was {good_answer}")
+
 def create_cobination_of_question(events: [Event], number_of_event:int) -> list[list[Event]]:
     questions = list(combinations(events, number_of_event))
     shuffle(questions)
